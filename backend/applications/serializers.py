@@ -1,11 +1,11 @@
 from rest_framework import serializers
 from .models import Application
 
-class ApplicationSerializers(serializers.ModelSerializer):
-    job_title = serializers.CharField(source = "job_title" , read_only = "True")
+class ApplicationSerializer(serializers.ModelSerializer):
+    job_title = serializers.CharField(source = "job.title" , read_only = True)
 
     class Meta:
         model = Application
-        field = "__all__"
-        read_only_field = ["job_seeker"]
+        fields = "__all__"
+        read_only_fields = ["job_seeker"]
          

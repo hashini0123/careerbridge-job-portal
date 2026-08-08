@@ -2,7 +2,7 @@ from django.db import models
 from accounts.models import User
 from jobs.models import Job
 
-class Applications(models.Model):
+class Application(models.Model):
     STATUS_CHOICES = [
         ("APPLIED" , "applied"),
         ("REVIEWED" , "reviewed"),
