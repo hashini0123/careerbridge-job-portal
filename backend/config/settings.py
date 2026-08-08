@@ -44,11 +44,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework_simplejwt',  
     'corsheaders',
     'accounts',
     'companies',
     'jobs',
     'applications',
+    
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
@@ -136,4 +138,6 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 CORS_ALLOW_ALL_ORIGINS = True  # development ekata witharai
+
+REST_FRAMEWORK = { 'DEFAULT_AUTHENTICATION_CLASSES': ( 'rest_framework_simplejwt.authentication.JWTAuthentication', ), }
 
