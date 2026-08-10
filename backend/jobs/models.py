@@ -19,7 +19,7 @@ class Job(models.Model):
         related_name="jobs",
     )
 
-    callable = models.ForeignKey(
+    category = models.ForeignKey(
         Category,
         on_delete= models.SET_NULL,
         null= True,
