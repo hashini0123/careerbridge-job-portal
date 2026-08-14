@@ -12,8 +12,7 @@ function Register() {
       await register(username, email, password, role);
       alert("Registration successful");
     } catch (error) {
-        console.log("Register error:", error.response?.data);
-        alert("Registration failed");
+      alert("Registration failed");
     }
   };
 
