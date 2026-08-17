@@ -10,8 +10,8 @@ function Login() {
     try{
       const data = await login(username, password);
 
-      localStorage.setItem("accesstoken", data.access);
-      localStorage.setItem("refreshtoken", data.refresh);
+      localStorage.setItem("accessToken", data.access);
+      localStorage.setItem("refreshToken", data.refresh);
 
       alert("login successful.");
     }catch(error){
