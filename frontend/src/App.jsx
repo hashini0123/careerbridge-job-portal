@@ -1,6 +1,7 @@
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
+import Logout from "./components/Logout";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Login />
       <Register />
       <Profile />
+      <Logout />
     </div>
   );
 }
