@@ -20,3 +20,15 @@ export const register = async (username, email, password, role) => {
   return response.data;
 
 }
+
+export const refreshAccessToken = async () => {
+  const refreshToken = localStorage.getItem("refreshToken");
+
+  const response = await api.post("/auth/login/refresh/", {
+    refresh: refreshToken,
+  });
+
+  localStorage.setItem("accessToken", response.data.access);
+
+  return response.data.access;
+};
